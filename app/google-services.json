@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "570583210891",
+    "project_id": "huecas2-a7947",
+    "storage_bucket": "huecas2-a7947.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:570583210891:android:7c2da66fff6f7d20de2d8e",
+        "android_client_info": {
+          "package_name": "com.example.huecas002"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "570583210891-g2jc2g0fssfsncbmnsck5k1t2vlhaf6v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQUAKiqnjz_9xsCwtxwzvYrvM4DPYlpsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "570583210891-g2jc2g0fssfsncbmnsck5k1t2vlhaf6v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
