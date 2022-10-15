@@ -21,11 +21,13 @@
 
         <TextView
             android:id="@+id/text_priority"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="198dp"
+            android:layout_height="88dp"
+            android:layout_below="@+id/text_huecanombre"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="189dp"
             android:text="prioridad
-"
-            android:layout_below="@+id/text_huecanombre"/>
+" />
 
 
     </RelativeLayout>
