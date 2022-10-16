@@ -1,6 +1,7 @@
 package com.example.huecas002;
 
 public class Hueca {
+    //Atributos
     private String nombre;
     private int prioridad;
     private String imagen;
