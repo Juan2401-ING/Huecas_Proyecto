@@ -18,6 +18,7 @@ public class HuecaAdapter extends FirestoreRecyclerAdapter <Hueca, HuecaAdapter.
     }
 
     @Override
+    //Ejemplo2github
     protected void onBindViewHolder(@NonNull HuecaHolder holder, int position, @NonNull Hueca model) {
      holder.textViewnombre.setText(model.getNombre());
      holder.textViewprioridad.setText(String.valueOf(model.getPrioridad()));
