@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private CollectionReference notebookRef = db.collection("Hueca");
     private HuecaAdapter adapter;
     @Override
+    //CambioEjemplo1
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
