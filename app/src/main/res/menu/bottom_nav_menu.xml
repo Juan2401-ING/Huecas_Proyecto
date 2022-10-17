@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="More"
+    <item android:title=""
         android:icon="@drawable/ic_baseline_toc_24"
         android:id="@+id/more" />
-    <item android:title="Home"
+    <item android:title=""
         android:icon="@drawable/ic_baseline_home_24"
         android:id="@+id/home"/>
-    <item android:title="Search"
+    <item android:title=""
         android:icon="@drawable/ic_baseline_search_24"
         android:id="@+id/search"/>
 </menu>
