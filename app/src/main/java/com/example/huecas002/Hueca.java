@@ -8,7 +8,7 @@ public class Hueca {
 
     public Hueca(){}
 
-    public Hueca(String nombre, int prioridad, String imagen) {
+    public Hueca(String nombre, int prioridad, String imagen, String direccion) {
         this.nombre = nombre;
         this.prioridad = prioridad;
         this.imagen = imagen;
