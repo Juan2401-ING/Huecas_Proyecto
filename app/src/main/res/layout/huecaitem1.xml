@@ -13,8 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="13.3dp"
+        android:layout_marginTop="209dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="204dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/imageview_diseno">
 
@@ -35,57 +35,79 @@
 
         <TextView
             android:id="@+id/text_priority"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="43dp"
+            android:layout_height="20dp"
             android:text="TextView"
-            android:textColor="#000000"
+            android:textColor="@color/white"
+            android:textSize="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.743"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toEndOf="@+id/like"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.909"
+            app:layout_constraintVertical_bias="0.786"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_conversion_absoluteWidth="57dp" />
+
+        <TextView
+            android:id="@+id/text_priority2"
+            android:layout_width="43dp"
+            android:layout_height="20dp"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.733"
+            app:layout_constraintStart_toEndOf="@+id/dislike"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.786"
             tools:layout_conversion_absoluteHeight="19dp"
             tools:layout_conversion_absoluteWidth="57dp" />
 
         <ImageButton
             android:id="@+id/ubicacion"
-            android:layout_width="51dp"
+            android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="4dp"
             android:background="@drawable/ubicacion"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.777"
+            app:layout_constraintVertical_bias="0.75"
             app:srcCompat="@drawable/ubicacion"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/like"
-            android:layout_width="39dp"
-            android:layout_height="41dp"
-            android:layout_marginEnd="92dp"
-            android:layout_marginBottom="24dp"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="152dp"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/like"
             android:scaleType="fitCenter"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ubicacion"
             app:srcCompat="@drawable/like"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/dislike"
-            android:layout_width="39dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="48dp"
             android:background="@drawable/dislike"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toEndOf="@+id/text_priority"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.63"
+            app:layout_constraintVertical_bias="0.857"
             app:srcCompat="@drawable/dislike"
             tools:ignore="MissingConstraints" />
 
@@ -93,29 +115,30 @@
             android:id="@+id/txt_direccion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="240dp"
-            android:layout_marginBottom="24dp"
-            android:text="Dirección"
+            android:layout_marginEnd="248dp"
+            android:layout_marginBottom="16dp"
+            android:text="Ubicación"
             android:textColor="@color/white"
-            android:textSize="15dp"
+            android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ubicacion" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imagenView"
-        android:layout_width="410dp"
-        android:layout_height="202dp"
+        android:layout_width="403dp"
+        android:layout_height="197dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-
         android:layout_centerInParent="true"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:srcCompat="@tools:sample/avatars" />

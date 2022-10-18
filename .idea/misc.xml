@@ -4,18 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/debug/res/drawable/ic_nuevoicono_launcher_background.xml" value="0.105" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/debug/res/layout/activity_main.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.105" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.1255" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1255" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.124" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.124" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable/ic_baseline_toc_24.xml" value="0.124" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable/ic_close.xml" value="0.105" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable/ic_launcher_background.xml" value="0.105" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable/imageview_diseno.xml" value="0.199" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/activity_menu.xml" value="0.536" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/activity_registro.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/fragment_acerca.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/fragment_favoritos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/fragment_perfil.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/hueca_item.xml" value="0.8" />
-        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/huecaitem1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/huecaitem1.xml" value="0.3683241252302026" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/nav_header.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/layout/txt_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/menu/drawer_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
