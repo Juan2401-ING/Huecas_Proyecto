@@ -11,9 +11,15 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
@@ -29,10 +35,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     DrawerLayout mDrawerLayout;
     NavigationView navigationView;
+    ImageView imageView;
 
 
     @Override
-    //CambioEjemplo1
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -40,7 +46,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.white)));
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_layout);
+        imageView = (ImageView) findViewById(R.id.imagenMenu);
+        imageView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
 
+        });
         //Navigation Drawer
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
@@ -86,13 +100,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         switch (item.getItemId()){
             case R.id.nav_perfil:
-                ft.replace(R.id.nav_perfil, new PerfilFragment()).commit();
+                ft.replace(R.id.content, new PerfilFragment()).commit();
                 break;
             case R.id.nav_favoritos:
-                ft.replace(R.id.nav_favoritos, new FavoritosFragment()).commit();
+                ft.replace(R.id.content, new FavoritosFragment()).commit();
                 break;
             case R.id.nav_acerca:
-                ft.replace(R.id.nav_acerca, new AcercaFragment()).commit();
+                ft.replace(R.id.content, new AcercaFragment()).commit();
                 break;
         }
         setTitle(item.getTitle());

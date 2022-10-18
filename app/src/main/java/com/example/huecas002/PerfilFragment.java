@@ -1,5 +1,6 @@
 package com.example.huecas002;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,9 +26,9 @@ public class PerfilFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public PerfilFragment() {
+    /*public PerfilFragment() {
         // Required empty public constructor
-    }
+    }*/
 
     /**
      * Use this factory method to create a new instance of
@@ -55,10 +57,23 @@ public class PerfilFragment extends Fragment {
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        /*View view = inflater.inflate(R.layout.fragment_perfil, container, false);
+        Button btnOpenPerfil = (Button) view.findViewById(R.id.btnlogin);
+        btnOpenPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), SubActivity.class);
+                in.putExtra("some", "somedata");
+                startActivity(in);
+            }
+        });
+        return view;*/
         return inflater.inflate(R.layout.fragment_perfil, container, false);
+
     }
 }
