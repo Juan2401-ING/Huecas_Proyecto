@@ -31,10 +31,21 @@ public class MenuActivity extends AppCompatActivity {
         textViewPersona.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MenuActivity.this, RegistroActivity.class);
+                /*Intent intent = new Intent(MenuActivity.this, RegistroActivity.class);
                 startActivity(intent);
 
-                Toast.makeText(MenuActivity.this, "Necesita estar registrado", Toast.LENGTH_LONG).show();
+                Toast.makeText(MenuActivity.this, "Necesita estar registrado", Toast.LENGTH_LONG).show();*/
+                FirebaseUser user = fb.getCurrentUser();
+                if(user!=null){
+                    Intent intent = new Intent(MenuActivity.this, Perfil.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(MenuActivity.this, RegistroActivity.class);
+                    startActivity(intent);
+
+                    Toast.makeText(MenuActivity.this, "Necesita estar registrado", Toast.LENGTH_LONG).show();
+                }
             }
         });
         textViewFavorito.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +57,9 @@ public class MenuActivity extends AppCompatActivity {
                 Toast.makeText(MenuActivity.this, "Necesita estar registrado", Toast.LENGTH_LONG).show();*/
                 FirebaseUser user = fb.getCurrentUser();
                 if(user!=null){
-                    Toast.makeText(MenuActivity.this, "Esta registrado", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(MenuActivity.this, Favritos.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
                 }else {
                     Intent intent = new Intent(MenuActivity.this, RegistroActivity.class);
                     startActivity(intent);
