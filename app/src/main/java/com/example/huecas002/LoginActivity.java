@@ -46,10 +46,10 @@ public class LoginActivity extends AppCompatActivity {
         btn_Ingresar= findViewById(R.id.btnsiguiente);
         btn_Registrarse= findViewById(R.id.btnregistro);
 
-        /*FirebaseUser user = fb.getCurrentUser();
+        FirebaseUser user = fb.getCurrentUser();
         if(user!=null){
             irhome();
-        }*/
+        }
 
         textView = (TextView) findViewById(R.id.omitirLogin);
         textView.setOnClickListener(new View.OnClickListener() {
