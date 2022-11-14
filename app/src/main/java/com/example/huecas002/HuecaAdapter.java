@@ -15,15 +15,17 @@ import java.util.List;
 
 public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> {
 
+
     public static class  ViewHolder extends RecyclerView.ViewHolder{
         private TextView nombre, prioridad, direccion;
-        //ImageView fotoHueca;
+        ImageView fotoHueca;
         public ViewHolder(View itemView){
             super(itemView);
+
             nombre= (TextView) itemView.findViewById(R.id.text_huecanombre);
             prioridad= (TextView) itemView.findViewById(R.id.text_priority);
             direccion= (TextView) itemView.findViewById(R.id.txt_direccion);
-            //fotoHueca= (ImageView) itemView.findViewById(R.id.imagenView);
+            fotoHueca= (ImageView) itemView.findViewById(R.id.imagenView);
         }
     }
     public List<Hueca> huecaList;
@@ -45,7 +47,7 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
         holder.nombre.setText(huecaList.get(position).getNombre());
         holder.prioridad.setText(""+huecaList.get(position).getPrioridad());
         holder.direccion.setText(huecaList.get(position).getUbicacion());
-        //holder.fotoHueca.setImageResource(huecaList.get(position).getImagen());
+        holder.fotoHueca.setImageResource(huecaList.get(position).getImagen());
     }
 
     @Override
