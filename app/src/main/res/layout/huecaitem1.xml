@@ -12,7 +12,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="13.3dp"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="209dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="4dp"
@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TextView"
+            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,6 +41,7 @@
             android:text="TextView"
             android:textColor="@color/white"
             android:textSize="18dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.073"
@@ -95,6 +97,7 @@
             app:srcCompat="@drawable/like"
             tools:ignore="MissingConstraints,SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
+
         <ImageButton
             android:id="@+id/dislike"
             android:layout_width="30dp"
@@ -118,6 +121,8 @@
             android:layout_marginEnd="248dp"
             android:layout_marginBottom="16dp"
             android:text="Ubicación"
+            android:textStyle="bold"
+
             android:textColor="@color/white"
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"

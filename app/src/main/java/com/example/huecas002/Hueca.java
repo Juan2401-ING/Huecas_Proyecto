@@ -1,17 +1,22 @@
 package com.example.huecas002;
 
-public class Hueca {
+import java.io.Serializable;
+
+public class Hueca implements Serializable {
     //Atributos
     private String nombre;
     private int prioridad;
-    private String imagen;
+    //private int imagen;
+    private String ubicacion;
+
 
     public Hueca(){}
 
-    public Hueca(String nombre, int prioridad, String imagen, String direccion) {
+    public Hueca(String nombre, int prioridad, String ubicacion) {
         this.nombre = nombre;
         this.prioridad = prioridad;
-        this.imagen = imagen;
+        this.ubicacion = ubicacion;
+
     }
 
     public String getNombre() {
@@ -20,5 +25,5 @@ public class Hueca {
     public int getPrioridad() {
         return prioridad;
     }
-    public String getImagen() {return imagen; }
+    public String getUbicacion() {return ubicacion; }
 }

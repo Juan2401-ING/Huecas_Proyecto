@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,22 +28,37 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference notebookRef = db.collection("Hueca");
     private HuecaAdapter adapter;
 
+
     DrawerLayout mDrawerLayout;
     NavigationView navigationView;
     ImageView imageView;
-
+    List<Hueca> huecas;
+    private RecyclerView recyclerView;
+    private HuecaAdapter huecaAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setUpRecyclerView();
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        huecaAdapter = new HuecaAdapter(obtenerHuecas());
+        recyclerView.setAdapter(huecaAdapter);
+
+
+
+
+
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.white)));
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_layout);
@@ -57,60 +73,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
         //Navigation Drawer
 
-        mDrawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
 
 
     }
-    private void setUpRecyclerView() {
-        Query query = notebookRef.orderBy("prioridad", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Hueca> options = new FirestoreRecyclerOptions.Builder<Hueca>()
-                .setQuery(query, Hueca.class)
-                .build();
-        adapter= new HuecaAdapter(options);
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        adapter.startListening();
+    public List<Hueca> obtenerHuecas(){
+        List<Hueca> huecas = new ArrayList<>();
+        huecas = new ArrayList<>();
+        huecas.add(new Hueca("Abysmo",5,"Quito"));
+        huecas.add(new Hueca("Poliburger",5,"Quito"));
+        huecas.add(new Hueca("Pizzas de $1.50",5,"Quito"));
+        return huecas;
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        adapter.stopListening();
-    }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        selectItemNav(item);
-        return true;
-    }
-
-    private void selectItemNav(MenuItem item) {
-
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-
-        switch (item.getItemId()){
-            case R.id.nav_perfil:
-                ft.replace(R.id.content, new PerfilFragment()).commit();
-                break;
-            case R.id.nav_favoritos:
-                ft.replace(R.id.content, new FavoritosFragment()).commit();
-                break;
-            case R.id.nav_acerca:
-                ft.replace(R.id.content, new AcercaFragment()).commit();
-                break;
-        }
-        setTitle(item.getTitle());
-        mDrawerLayout.closeDrawers();
-
-    }
 }

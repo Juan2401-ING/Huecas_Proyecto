@@ -3,6 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/debug/res/drawable/ic_nuevoicono_launcher_background.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/debug/res/mipmap-anydpi-v26/ic_nuevoicono_launcher.xml" value="0.1" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/debug/res/mipmap-anydpi-v26/ic_nuevoicono_launcher_round.xml" value="0.1" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/diseno.xml" value="0.1" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/ic_baseline_info_24.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/ic_baseline_toc_24.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/ic_close.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/ic_launcher_background.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/drawable/imageview_diseno.xml" value="0.136" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/layout/activity_menu.xml" value="0.5263157894736842" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/layout/activity_perfil.xml" value="0.20833333333333334" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/layout/activity_registro.xml" value="0.20833333333333334" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/layout/huecaitem1.xml" value="0.3263707571801567" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/layout/nav_header.xml" value="0.20833333333333334" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/layout/txt_layout.xml" value="0.20833333333333334" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/menu/drawer_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Proyecto/Huecas_Proyecto/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/debug/res/drawable/ic_nuevoicono_launcher_background.xml" value="0.105" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/debug/res/layout/activity_main.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/jbena/AndroidStudioProjects/Huecas002/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.105" />

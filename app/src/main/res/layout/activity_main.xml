@@ -31,17 +31,27 @@
 
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+
             android:id="@+id/bottomNavigationView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#05FADC"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_menu">
+            app:menu="@menu/bottom_nav_menu"
 
+
+            >
+
+            <ImageView
+                android:id="@+id/imagenMenu"
+                android:layout_width="45dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="30dp"
+                app:srcCompat="@drawable/ic_baseline_toc_24" />
         </com.google.android.material.bottomnavigation.BottomNavigationView>
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
@@ -51,23 +61,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
+
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.45"
             tools:ignore="MissingConstraints">
 
         </androidx.recyclerview.widget.RecyclerView>
-
-        <ImageView
-            android:id="@+id/imagenMenu"
-            android:layout_width="45dp"
-            android:layout_height="55dp"
-            app:layout_constraintBottom_toTopOf="@+id/recycler_view"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.052"
-            app:srcCompat="@drawable/ic_baseline_toc_24" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
