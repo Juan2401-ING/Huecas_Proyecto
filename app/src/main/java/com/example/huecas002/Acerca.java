@@ -10,6 +10,6 @@ public class Acerca extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acerca);
-        //Mathew Puta1
+        //Mathew Puta2
     }
 }
