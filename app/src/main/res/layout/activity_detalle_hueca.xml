@@ -6,42 +6,98 @@
     android:layout_height="match_parent"
     tools:context=".DetalleHueca">
 
-    <TextView
-        android:id="@+id/detailDireccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailHuecaImagen" />
 
-    <TextView
-        android:id="@+id/detailPrioridad"
-        android:layout_width="69dp"
-        android:layout_height="18dp"
-        android:layout_marginTop="92dp"
-        android:text="TextView"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/detailHuecaImagen" />
+    <RelativeLayout
+        android:layout_width="408dp"
+        android:layout_height="263dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_border"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailHuecaImagen"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/detailDireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/detailPrioridad"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="50dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="72dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.162"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailDireccion"
+            app:srcCompat="@drawable/ic_like" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="64dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="39dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.653"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailDireccion"
+            app:srcCompat="@drawable/ic_dislike" />
+
+        <TextView
+            android:id="@+id/disliketext"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="255dp"
+            android:layout_marginTop="50dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.355"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/detailDireccion" />
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/detailNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="TextView"
         android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="34dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/detailHuecaImagen"
@@ -52,39 +108,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailNombre"
         tools:srcCompat="@tools:sample/avatars" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="72dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailDireccion"
-        app:srcCompat="@drawable/ic_like" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="73dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailDireccion"
-        app:srcCompat="@drawable/ic_dislike" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="AEE"
-        android:textSize="25dp"
+        android:background="#05FADC"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/detailDireccion" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"        >
+
+        <ImageView
+            android:id="@+id/imagenMenu"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="110dp"
+            app:srcCompat="@drawable/ic_baseline_toc_24" />
+        <ImageView
+            android:id="@+id/imagenMain"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="250dp"
+            app:srcCompat="@drawable/ic_baseline_home_24" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

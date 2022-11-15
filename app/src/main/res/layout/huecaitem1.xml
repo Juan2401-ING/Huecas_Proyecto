@@ -66,7 +66,7 @@
                     tools:layout_conversion_absoluteWidth="57dp" />
 
                 <TextView
-                    android:id="@+id/text_priority2"
+                    android:id="@+id/text_dislike"
                     android:layout_width="43dp"
                     android:layout_height="20dp"
                     android:text="0"
@@ -137,7 +137,7 @@
                     android:layout_marginBottom="16dp"
                     android:text="Ubicación"
                     android:textColor="#FFFFFF"
-                    android:textSize="14dp"
+                    android:textSize="18dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
