@@ -84,10 +84,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
         //Navigation Drawer
-
-
-
-
     }
 
     public List<Hueca> obtenerHuecas(){
