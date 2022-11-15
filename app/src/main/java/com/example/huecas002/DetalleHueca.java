@@ -3,12 +3,14 @@ package com.example.huecas002;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetalleHueca extends AppCompatActivity {
     private TextView nombreHuecaDetail;
     private TextView prioridadHuecaDetail;
     private TextView direcciomHuecaDetail;
+    private ImageView imagenHueca;
     private Hueca itemDetail;
 
     @Override
@@ -24,11 +26,13 @@ public class DetalleHueca extends AppCompatActivity {
         nombreHuecaDetail = findViewById(R.id.detailNombre);
         prioridadHuecaDetail = findViewById(R.id.detailPrioridad);
         direcciomHuecaDetail = findViewById(R.id.detailDireccion);
+        imagenHueca = findViewById(R.id.detailHuecaImagen);
     }
     private void initValues(){
         itemDetail = (Hueca) getIntent().getExtras().getSerializable("itemDetail");
         nombreHuecaDetail.setText(itemDetail.getNombre());
         prioridadHuecaDetail.setText(""+itemDetail.getPrioridad());
         direcciomHuecaDetail.setText(itemDetail.getUbicacion());
-            }
+        imagenHueca.setImageResource(itemDetail.getImagen());
+    }
 }
