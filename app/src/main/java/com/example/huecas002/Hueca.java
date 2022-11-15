@@ -6,16 +6,17 @@ public class Hueca implements Serializable {
     //Atributos
     private String nombre;
     private int prioridad;
-    //private int imagen;
+    private int imagen;
     private String ubicacion;
 
 
     public Hueca(){}
 
-    public Hueca(String nombre, int prioridad, String ubicacion) {
+    public Hueca(String nombre, int prioridad, String ubicacion, int imagen) {
         this.nombre = nombre;
         this.prioridad = prioridad;
         this.ubicacion = ubicacion;
+        this.imagen = imagen;
 
     }
 
@@ -26,4 +27,5 @@ public class Hueca implements Serializable {
         return prioridad;
     }
     public String getUbicacion() {return ubicacion; }
+    public int getImagen() {return imagen; }
 }

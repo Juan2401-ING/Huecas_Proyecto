@@ -54,11 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
         huecaAdapter = new HuecaAdapter(obtenerHuecas());
         recyclerView.setAdapter(huecaAdapter);
-
-
-
-
-
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.white)));
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.txt_layout);
@@ -80,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
     public List<Hueca> obtenerHuecas(){
         List<Hueca> huecas = new ArrayList<>();
         huecas = new ArrayList<>();
-        huecas.add(new Hueca("Abysmo",5,"Quito"));
-        huecas.add(new Hueca("Poliburger",5,"Quito"));
-        huecas.add(new Hueca("Pizzas de $1.50",5,"Quito"));
+        huecas.add(new Hueca("Abysmo",5,"Quito",R.drawable.abysmo));
+        huecas.add(new Hueca("Poliburger",5,"Quito",R.drawable.poliburger));
+        huecas.add(new Hueca("Cevichochos de la roca",5,"Quito",R.drawable.fav));
         return huecas;
     }
 
