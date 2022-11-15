@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ public class MenuActivity extends AppCompatActivity {
 
     TextView textViewPersona, textViewFavorito, textViewAcercade;
     Button cerrarsesion;
+    ImageView imageView, imagenMain;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,24 @@ public class MenuActivity extends AppCompatActivity {
         cerrarsesion = findViewById(R.id.btnCerrarSesion);
         FirebaseAuth fb = FirebaseAuth.getInstance();
 
+        imageView = (ImageView) findViewById(R.id.imagenMenu);
+        imageView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+
+        });
+        imagenMain = (ImageView) findViewById(R.id.imagenMain);
+        imagenMain.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+
+        });
 
         textViewPersona.setOnClickListener(new View.OnClickListener() {
             @Override

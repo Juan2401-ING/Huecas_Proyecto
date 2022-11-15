@@ -7,6 +7,7 @@
     android:id="@+id/drawer_layout"
     tools:context=".MainActivity">
 
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
@@ -40,29 +41,32 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_menu"
-
-
-            >
+            app:menu="@menu/bottom_nav_menu"        >
 
             <ImageView
                 android:id="@+id/imagenMenu"
                 android:layout_width="45dp"
                 android:layout_height="55dp"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="110dp"
                 app:srcCompat="@drawable/ic_baseline_toc_24" />
+            <ImageView
+                android:id="@+id/imagenMain"
+                android:layout_width="45dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="250dp"
+                app:srcCompat="@drawable/ic_baseline_home_24" />
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
-            android:layout_width="412dp"
-            android:layout_height="600dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="413dp"
+            android:layout_height="668dp"
+            android:layout_marginBottom="4dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-
-            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints">
 
         </androidx.recyclerview.widget.RecyclerView>
