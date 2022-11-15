@@ -1,6 +1,7 @@
 package com.example.huecas002;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,9 @@ import java.util.List;
 public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> {
 
 
+    public interface  OnItemClickListener{
+        void onItemClick(Hueca hueca);
+    }
     public static class  ViewHolder extends RecyclerView.ViewHolder{
         private TextView nombre, prioridad, direccion;
         ImageView fotoHueca;
@@ -31,6 +35,7 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
     public List<Hueca> huecaList;
 
     public HuecaAdapter(List<Hueca> huecaList) {
+
         this.huecaList = huecaList;
     }
 
@@ -44,9 +49,20 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder( ViewHolder holder, int position) {
+        final Hueca item = huecaList.get(position);
         holder.nombre.setText(huecaList.get(position).getNombre());
         holder.prioridad.setText(""+huecaList.get(position).getPrioridad());
         holder.direccion.setText(huecaList.get(position).getUbicacion());
+        //holder.fotoHueca.setImageResource(huecaList.get(position).getImagen());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.itemView.getContext(),DetalleHueca.class);
+                intent.putExtra("itemDetail", item);
+                holder.itemView.getContext().startActivity(intent);
+
+            }
+        });
         holder.fotoHueca.setImageResource(huecaList.get(position).getImagen());
     }
 
