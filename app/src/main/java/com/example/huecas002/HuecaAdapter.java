@@ -2,6 +2,8 @@ package com.example.huecas002;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,15 +28,17 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
         void onItemClick(Hueca hueca);
     }
     public static class  ViewHolder extends RecyclerView.ViewHolder{
-        private TextView nombre, prioridad, direccion;
+        private TextView nombre, prioridad, direccion, dislike, ubicacion;
         ImageView fotoHueca;
         public ViewHolder(View itemView){
             super(itemView);
 
             nombre= (TextView) itemView.findViewById(R.id.text_huecanombre);
             prioridad= (TextView) itemView.findViewById(R.id.text_priority);
+            dislike= (TextView) itemView.findViewById(R.id.text_dislike);
             direccion= (TextView) itemView.findViewById(R.id.txt_direccion);
             fotoHueca= (ImageView) itemView.findViewById(R.id.imagenView);
+            ubicacion = (TextView) itemView.findViewById(R.id.txt_direccion);
         }
     }
     public List<Hueca> huecaList;
@@ -59,7 +63,14 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
         final Hueca item = huecaList.get(position);
         holder.nombre.setText(huecaList.get(position).getNombre());
         holder.prioridad.setText(""+huecaList.get(position).getPrioridad());
-        holder.direccion.setText(huecaList.get(position).getUbicacion());
+        holder.dislike.setText(""+huecaList.get(position).getDislike());
+        //holder.direccion.setText(huecaList.get(position).getUbicacion());
+        holder.ubicacion.setText((Html.fromHtml(
+                "" +
+                        "<a href=\"http://maps.google.com/maps?q=1+Infinite+Loop,+Cupertino,+Santa+Clara,+California+95014\">" +
+                        "Ubicación"+
+                        "</a>")));
+        holder.ubicacion.setMovementMethod(LinkMovementMethod.getInstance());
         //holder.fotoHueca.setImageResource(huecaList.get(position).getImagen());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
