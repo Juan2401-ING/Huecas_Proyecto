@@ -5,16 +5,21 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
-public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> {
+public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> implements Filterable {
 
 
     public interface  OnItemClickListener{
@@ -33,10 +38,12 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
         }
     }
     public List<Hueca> huecaList;
+    public List<Hueca> huecaListfull;
 
     public HuecaAdapter(List<Hueca> huecaList) {
 
         this.huecaList = huecaList;
+        huecaListfull = new ArrayList<>(huecaList);
     }
 
     @NonNull
@@ -70,4 +77,43 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
     public int getItemCount() {
         return huecaList.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return filtro;
+    }
+     private Filter filtro = new Filter() {
+         @Override
+         protected FilterResults performFiltering(CharSequence constraint) {
+             List<Hueca> listaFiltrada = new ArrayList<>();
+
+             if(constraint == null || constraint.length() == 0){
+                 listaFiltrada.addAll(huecaListfull);
+
+             }else {
+                 String filterPattern = constraint.toString().toLowerCase().trim();
+
+                 for (Hueca item:huecaListfull ){
+                     if(item.getNombre().toLowerCase().contains(filterPattern)){
+                         listaFiltrada.add(item);
+
+                     }
+                 }
+
+
+             }
+             FilterResults resultadofiltro = new FilterResults();
+             resultadofiltro.values= listaFiltrada;
+             return  resultadofiltro;
+
+
+         }
+
+         @Override
+         protected void publishResults(CharSequence constraint, FilterResults results) {
+            huecaList.clear();
+            huecaList.addAll((List) results.values);
+            notifyDataSetChanged();
+         }
+     };
 }
