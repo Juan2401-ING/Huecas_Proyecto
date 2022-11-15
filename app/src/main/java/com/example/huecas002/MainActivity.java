@@ -72,8 +72,16 @@ public class MainActivity extends AppCompatActivity {
         List<Hueca> huecas = new ArrayList<>();
         huecas = new ArrayList<>();
         huecas.add(new Hueca("Abysmo",5,"Quito",R.drawable.abysmo));
-        huecas.add(new Hueca("Poliburger",5,"Quito",R.drawable.poliburger));
-        huecas.add(new Hueca("Cevichochos de la roca",5,"Quito",R.drawable.fav));
+        huecas.add(new Hueca("Poliburger",2,"Quito",R.drawable.poliburger));
+        huecas.add(new Hueca("La Sanducheria",5,"Quito",R.drawable.sanducheria));
+        huecas.add(new Hueca("Rincon Orense",3,"Quito",R.drawable.rinconorense));
+        huecas.add(new Hueca("Ecuaviche",5,"Quito",R.drawable.ecuaviche));
+        huecas.add(new Hueca("Chao Pecaeo Veintimilla",5,"Quito",R.drawable.chaopescaoveintimilla));
+        huecas.add(new Hueca("Marcando el Camino",5,"Quito",R.drawable.marcandoelcamino));
+        huecas.add(new Hueca("Mi playita cevichera",5,"Quito",R.drawable.miplayita));
+        huecas.add(new Hueca("Juarez la Mexicana",5,"Quito",R.drawable.juarezlamexicana));
+        huecas.add(new Hueca("Banderas de la FOch",5,"Quito",R.drawable.banderas));
+        huecas.add(new Hueca("PapasLaMana",5,"Quito",R.drawable.papaslamana));
         return huecas;
     }
 
