@@ -29,7 +29,7 @@ public class MenuActivity extends AppCompatActivity {
         cerrarsesion = findViewById(R.id.btnCerrarSesion);
         FirebaseAuth fb = FirebaseAuth.getInstance();
 
-        imageView = (ImageView) findViewById(R.id.imagenMenu);
+        imageView = (ImageView) findViewById(R.id.ImagenMenu);
         imageView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -38,7 +38,7 @@ public class MenuActivity extends AppCompatActivity {
             }
 
         });
-        imagenMain = (ImageView) findViewById(R.id.imagenMain);
+        imagenMain = (ImageView) findViewById(R.id.ImagenHouse);
         imagenMain.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

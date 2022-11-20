@@ -26,7 +26,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="165dp"
-            android:layout_marginTop="10dp"
             android:text="TextView"
             android:textSize="18dp"
             android:textStyle="bold"
@@ -34,54 +33,53 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
-
         <TextView
             android:id="@+id/detailPrioridad"
             android:layout_width="35dp"
             android:layout_height="25dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="50dp"
+            android:layout_below="@+id/detailDireccion"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="92dp"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/imageView6"
             app:layout_constraintStart_toEndOf="@+id/imageView4" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="72dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="35dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.162"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailDireccion"
-            app:srcCompat="@drawable/ic_like" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="64dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="190dp"
-            android:layout_marginTop="39dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.653"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailDireccion"
-            app:srcCompat="@drawable/ic_dislike" />
-
         <TextView
             android:id="@+id/disliketext"
             android:layout_width="35dp"
             android:layout_height="25dp"
-            android:layout_marginStart="255dp"
-            android:layout_marginTop="50dp"
+            android:layout_below="@+id/detailDireccion"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="242dp"
             android:textSize="18dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.355"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/detailDireccion" />
+
+        <ImageButton
+            android:id="@+id/ButtonLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailDireccion"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="33dp"
+            android:layout_marginEnd="291dp"
+            app:srcCompat="@drawable/ic_like" />
+
+        <ImageButton
+            android:id="@+id/ButtonDislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailDireccion"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="149dp"
+            app:srcCompat="@drawable/ic_dislike" />
 
     </RelativeLayout>
 
@@ -121,13 +119,13 @@
         app:menu="@menu/bottom_nav_menu"        >
 
         <ImageView
-            android:id="@+id/imagenMenu"
+            android:id="@+id/ImagenMenu"
             android:layout_width="45dp"
             android:layout_height="55dp"
             android:layout_marginStart="110dp"
             app:srcCompat="@drawable/ic_baseline_toc_24" />
         <ImageView
-            android:id="@+id/imagenMain"
+            android:id="@+id/ImagenHouse"
             android:layout_width="45dp"
             android:layout_height="55dp"
             android:layout_marginStart="250dp"

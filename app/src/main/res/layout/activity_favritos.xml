@@ -10,11 +10,45 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
-        android:text="favoritos"
+        android:layout_marginTop="4dp"
+        android:text="Tus Favoritos"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#05FADC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu"        >
+
+        <ImageView
+            android:id="@+id/ImagenMenu"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="110dp"
+            app:srcCompat="@drawable/ic_baseline_toc_24" />
+        <ImageView
+            android:id="@+id/ImagenHouse"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="250dp"
+            app:srcCompat="@drawable/ic_baseline_home_24" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerhuecas"
+        android:layout_width="412dp"
+        android:layout_height="572dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        tools:layout_editor_absoluteX="-2dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
