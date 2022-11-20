@@ -2,13 +2,21 @@ package com.example.huecas002;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.util.ArrayList;
 
 public class DetalleHueca extends AppCompatActivity {
     private TextView nombreHuecaDetail;
@@ -18,16 +26,23 @@ public class DetalleHueca extends AppCompatActivity {
     private ImageView imagenHueca;
     private Hueca itemDetail;
     ImageView imageView, imagenMain;
+    ImageButton btnlike;
+    ArrayList<Hueca> listahueca = new ArrayList<Hueca>();
+    int index = 0;
+    TextView prueba;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_hueca);
 
+        FirebaseAuth fb = FirebaseAuth.getInstance();
+
         initViews();
         initValues();
 
-        imageView = (ImageView) findViewById(R.id.imagenMenu);
+        imageView = (ImageView) findViewById(R.id.ImagenMenu);
         imageView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -36,7 +51,7 @@ public class DetalleHueca extends AppCompatActivity {
             }
 
         });
-        imagenMain = (ImageView) findViewById(R.id.imagenMain);
+        imagenMain = (ImageView) findViewById(R.id.ImagenHouse);
         imagenMain.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -46,7 +61,32 @@ public class DetalleHueca extends AppCompatActivity {
 
         });
 
+        btnlike = findViewById(R.id.ButtonLike);
+
+        btnlike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                FirebaseUser user = fb.getCurrentUser();
+                if(user!=null){
+                    addfavorite();
+                    Intent intent = new Intent(DetalleHueca.this, Favritos.class);
+                    intent.putExtra("listaDatos", listahueca);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(DetalleHueca.this, RegistroActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(DetalleHueca.this, "Necesita estar registrado", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
+
+    private void addfavorite(){
+        itemDetail = (Hueca) getIntent().getExtras().getSerializable("itemDetail");
+        listahueca.add(new Hueca(itemDetail.getNombre(),itemDetail.getPrioridad(),itemDetail.getDislike(),itemDetail.getUbicacion(),itemDetail.getImagen()));
+    }
+
     private void initViews(){
         nombreHuecaDetail = findViewById(R.id.detailNombre);
         prioridadHuecaDetail = findViewById(R.id.detailPrioridad);
