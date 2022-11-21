@@ -1,5 +1,6 @@
 package com.example.huecas002;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,8 @@ import java.util.Map;
 public class RegistroActivity extends AppCompatActivity {
 
     TextView textView;
+    TextView textView1;
+
     private EditText mEditnombre;
     private EditText mEditapellido;
     private EditText mEditmail;
@@ -40,6 +43,7 @@ public class RegistroActivity extends AppCompatActivity {
     FirebaseFirestore db;
     DatabaseReference mDatareference;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,8 +98,15 @@ public class RegistroActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(RegistroActivity.this, MainActivity.class);
                 startActivity(intent);
-
                 Toast.makeText(RegistroActivity.this, "Omitio el registro", Toast.LENGTH_LONG).show();
+            }
+        });
+        textView1 = (TextView) findViewById(R.id.omitirRegistro2);
+        textView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegistroActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }

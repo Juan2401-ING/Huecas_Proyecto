@@ -3,6 +3,7 @@ package com.example.huecas002;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ public class DetalleHueca extends AppCompatActivity {
     CharSequence di;
     TextView prueba;
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,13 +69,13 @@ public class DetalleHueca extends AppCompatActivity {
         });
 
         btnlike = findViewById(R.id.ButtonLike);
-
         btnlike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 FirebaseUser user = fb.getCurrentUser();
                 if(user!=null){
+                    //Añade a Favoritos
                     addfavorite();
                     Intent intent = new Intent(DetalleHueca.this, Favritos.class);
                     intent.putExtra("listaDatos", listahueca);
@@ -85,6 +87,27 @@ public class DetalleHueca extends AppCompatActivity {
                 }
             }
         });
+
+        btndislike = findViewById(R.id.ButtonDislike);
+        dislikeHuecaDetail = findViewById(R.id.disliketext);
+        btndislike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseUser user = fb.getCurrentUser();
+                if(user!=null){
+                    //Añade el dislike
+                    itemDetail = (Hueca) getIntent().getExtras().getSerializable("itemDetail");
+                    int numdislike = itemDetail.getDislike();
+                    int nuevonumdislike = numdislike - 1;
+                    dislikeHuecaDetail.setText(""+nuevonumdislike);
+                }else {
+                    Intent intent = new Intent(DetalleHueca.this, RegistroActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(DetalleHueca.this, "Necesita estar registrado", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
     }
 
     private void addfavorite(){

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +46,10 @@ public class Favritos extends AppCompatActivity {
             getSupportActionBar().setCustomView(R.layout.txt_layout);
             imageView = (ImageView) findViewById(R.id.ImagenMenu);
         }
+        else{
+            Toast.makeText(this, "No tiene favoritos", Toast.LENGTH_SHORT).show();
+        }
+
 
         imageView = (ImageView) findViewById(R.id.ImagenMenu);
         imageView.setOnClickListener(new View.OnClickListener(){

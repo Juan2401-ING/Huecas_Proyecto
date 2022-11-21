@@ -3,7 +3,11 @@ package com.example.huecas002;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.FirebaseApp;
@@ -17,12 +21,14 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Perfil extends AppCompatActivity {
 
-    TextView name, lastname, email;
+    ImageView imageView, imagenMain;
 
+    TextView name, lastname, email;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
 
     DatabaseReference Base_de_datos;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,5 +59,25 @@ public class Perfil extends AppCompatActivity {
 
             }
         });
+
+        imageView = (ImageView) findViewById(R.id.ImagenMenu);
+        imageView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this, MenuActivity.class);
+                startActivity(intent);
+            }
+
+        });
+        imagenMain = (ImageView) findViewById(R.id.ImagenHouse);
+        imagenMain.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Perfil.this, MainActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
     }
 }
