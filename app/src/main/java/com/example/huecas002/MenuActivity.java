@@ -13,15 +13,21 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+
 public class MenuActivity extends AppCompatActivity {
 
     TextView textViewPersona, textViewFavorito, textViewAcercade;
     Button cerrarsesion;
     ImageView imageView, imagenMain;
+    private ArrayList<Hueca> listahueca;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        listahueca = (ArrayList<Hueca> ) getIntent().getSerializableExtra("listaDatos");
 
         textViewPersona = (TextView) findViewById(R.id.textMiperfil);
         textViewFavorito = (TextView) findViewById(R.id.textFavorito);
@@ -71,19 +77,14 @@ public class MenuActivity extends AppCompatActivity {
         textViewFavorito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent intent = new Intent(MenuActivity.this, RegistroActivity.class);
-                startActivity(intent);
-
-                Toast.makeText(MenuActivity.this, "Necesita estar registrado", Toast.LENGTH_LONG).show();*/
                 FirebaseUser user = fb.getCurrentUser();
                 if(user!=null){
                     Intent intent = new Intent(MenuActivity.this, Favritos.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP |Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtra("listaDatos", listahueca);
                     startActivity(intent);
                 }else {
                     Intent intent = new Intent(MenuActivity.this, RegistroActivity.class);
                     startActivity(intent);
-
                     Toast.makeText(MenuActivity.this, "Necesita estar registrado", Toast.LENGTH_LONG).show();
                 }
             }

@@ -34,9 +34,8 @@ public class Favritos extends AppCompatActivity {
         setContentView(R.layout.activity_favritos);
 
         listaDatos = (ArrayList<Hueca> ) getIntent().getSerializableExtra("listaDatos");
-        comprobar = listaDatos.isEmpty();
 
-        if (comprobar == false){
+        if (listaDatos != null){
             recyclerView = (RecyclerView) findViewById(R.id.recyclerhuecas);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             huecaAdapter = new HuecaAdapter(obtenerHuecas());
