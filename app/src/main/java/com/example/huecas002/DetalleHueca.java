@@ -33,6 +33,7 @@ public class DetalleHueca extends AppCompatActivity {
     ImageButton btndislike;
     Button ubicacion;
     ArrayList<Hueca> listahueca = new ArrayList<Hueca>();
+
     int index = 0;
     String dir;
     CharSequence di;
@@ -79,6 +80,8 @@ public class DetalleHueca extends AppCompatActivity {
                     //Añade a Favoritos
                     addfavorite();
                     Intent intent = new Intent(DetalleHueca.this, Favritos.class);
+                    Intent intent1 = new Intent(DetalleHueca.this, MenuActivity.class);
+                    intent1.putExtra("listaDatos", listahueca);
                     intent.putExtra("listaDatos", listahueca);
                     startActivity(intent);
                 }else {
