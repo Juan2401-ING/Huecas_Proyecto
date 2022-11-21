@@ -39,8 +39,8 @@
             android:layout_height="25dp"
             android:layout_below="@+id/detailDireccion"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="42dp"
-            android:layout_marginEnd="92dp"
+            android:layout_marginTop="43dp"
+            android:layout_marginEnd="236dp"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/imageView6"
@@ -52,8 +52,8 @@
             android:layout_height="25dp"
             android:layout_below="@+id/detailDireccion"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="42dp"
-            android:layout_marginEnd="242dp"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="89dp"
             android:textSize="18dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,9 +67,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/detailDireccion"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="34dp"
             android:layout_marginEnd="291dp"
-            app:srcCompat="@drawable/ic_like" />
+            app:srcCompat="@drawable/ic_like"
+            />
 
         <ImageButton
             android:id="@+id/ButtonDislike"
