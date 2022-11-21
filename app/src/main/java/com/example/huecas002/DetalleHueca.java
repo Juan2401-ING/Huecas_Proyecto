@@ -30,6 +30,7 @@ public class DetalleHueca extends AppCompatActivity {
     private Hueca itemDetail;
     ImageView imageView, imagenMain;
     ImageButton btnlike;
+    ImageButton btndislike;
     Button ubicacion;
     ArrayList<Hueca> listahueca = new ArrayList<Hueca>();
     int index = 0;
