@@ -75,17 +75,17 @@ public class MainActivity extends AppCompatActivity {
     public List<Hueca> obtenerHuecas(){
         List<Hueca> huecas = new ArrayList<>();
         huecas = new ArrayList<>();
-        huecas.add(new Hueca("Abysmo",10,2,"Quito",R.drawable.abysmo));
-        huecas.add(new Hueca("Poliburger",9,1,"Quito",R.drawable.poliburger));
-        huecas.add(new Hueca("La Sanducheria",8,2,"Quito",R.drawable.sanducheria));
-        huecas.add(new Hueca("Rincon Orense",7,1,"Quito",R.drawable.rinconorense));
-        huecas.add(new Hueca("Ecuaviche",5,1,"Quito",R.drawable.ecuaviche));
-        huecas.add(new Hueca("Chao Pecaeo Veintimilla",4,4,"Quito",R.drawable.chaopescaoveintimilla));
-        huecas.add(new Hueca("Marcando el Camino",4,2,"Quito",R.drawable.marcandoelcamino));
-        huecas.add(new Hueca("Mi playita cevichera",3,3,"Quito",R.drawable.miplayita));
-        huecas.add(new Hueca("Juarez la Mexicana",2,5,"Quito",R.drawable.juarezlamexicana));
-        huecas.add(new Hueca("Banderas de la Foch",1,9,"Quito",R.drawable.banderas));
-        huecas.add(new Hueca("Papas La Mana",5,10,"Quito",R.drawable.papaslamana));
+        huecas.add(new Hueca("Abysmo",10,2,"https://g.page/abysmobrewpub?share",R.drawable.abysmo));
+        huecas.add(new Hueca("Poliburger",9,1,"https://goo.gl/maps/hnxwqz7x4PmvPouh9",R.drawable.poliburger));
+        huecas.add(new Hueca("La Sanducheria",8,2,"https://goo.gl/maps/TRcwSo65Lpg3K3pu6",R.drawable.sanducheria));
+        huecas.add(new Hueca("Rincon Orense",7,1,"https://goo.gl/maps/JJqiZVsfwAcpRJap6",R.drawable.rinconorense));
+        huecas.add(new Hueca("Ecuaviche",5,1,"https://goo.gl/maps/Kd1k5WpTPRtScQuMA",R.drawable.ecuaviche));
+        huecas.add(new Hueca("Chao Pecaeo Veintimilla",4,4,"https://goo.gl/maps/oLuPqvE3wUkYD3bJA",R.drawable.chaopescaoveintimilla));
+        huecas.add(new Hueca("Marcando el Camino",4,2,"https://g.page/marcandoelcaminohyc?share",R.drawable.marcandoelcamino));
+        huecas.add(new Hueca("Mi playita cevichera",3,3,"https://goo.gl/maps/y7SiALPkiFumhouz8",R.drawable.miplayita));
+        huecas.add(new Hueca("Juarez la Mexicana",2,5,"https://g.page/Juarezalamexicana?share",R.drawable.juarezlamexicana));
+        huecas.add(new Hueca("Banderas de la Foch",1,9,"https://goo.gl/maps/Wbs7j1YpzGAYp56L7",R.drawable.banderas));
+        huecas.add(new Hueca("Papas La Mana",5,10,"https://goo.gl/maps/coYLw8TRTD79yMB48",R.drawable.papaslamana));
         return huecas;
     }
 

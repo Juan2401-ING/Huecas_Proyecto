@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,8 +30,12 @@ public class DetalleHueca extends AppCompatActivity {
     private Hueca itemDetail;
     ImageView imageView, imagenMain;
     ImageButton btnlike;
-    ImageButton btndislike;
+    Button ubicacion;
     ArrayList<Hueca> listahueca = new ArrayList<Hueca>();
+    int index = 0;
+    String dir;
+    CharSequence di;
+    TextView prueba;
 
 
     @SuppressLint("MissingInflatedId")
@@ -115,18 +121,37 @@ public class DetalleHueca extends AppCompatActivity {
         dislikeHuecaDetail = findViewById(R.id.disliketext);
         direcciomHuecaDetail = findViewById(R.id.detailDireccion);
         imagenHueca = findViewById(R.id.detailHuecaImagen);
+        //ubicacion = findViewById(R.id.btnUbi);
     }
     private void initValues(){
         itemDetail = (Hueca) getIntent().getExtras().getSerializable("itemDetail");
         nombreHuecaDetail.setText(itemDetail.getNombre());
         prioridadHuecaDetail.setText(""+itemDetail.getPrioridad());
         dislikeHuecaDetail.setText(""+itemDetail.getDislike());
-        //direcciomHuecaDetail.setText(itemDetail.getUbicacion());
-        direcciomHuecaDetail.setText((Html.fromHtml(
+        //direcciomHuecaDetail.setText(""+itemDetail.getUbicacion());
+        dir = itemDetail.getUbicacion();
+
+        /*ubicacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri _link = Uri.parse(dir);
+                Intent i = new Intent(Intent.ACTION_VIEW,_link);
+                startActivity(i);
+            }
+        });*/
+        direcciomHuecaDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri _link = Uri.parse(dir);
+                Intent i = new Intent(Intent.ACTION_VIEW,_link);
+                startActivity(i);
+            }
+        });
+        /*direcciomHuecaDetail.setText((Html.fromHtml(
                 "" +
                         "<a href=\"https://www.google.com/maps/place/Pontificia+Universidad+Católica+del+Ecuador/@37.3318412,-122.0323645\">" +
                         "Ubicación"+
-                        "</a>")));
+                        "</a>")));*/
         direcciomHuecaDetail.setMovementMethod(LinkMovementMethod.getInstance());
         imagenHueca.setImageResource(itemDetail.getImagen());
     }
