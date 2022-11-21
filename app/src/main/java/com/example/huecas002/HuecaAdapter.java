@@ -28,8 +28,8 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
         void onItemClick(Hueca hueca);
     }
     public static class  ViewHolder extends RecyclerView.ViewHolder{
-        private TextView nombre, prioridad, direccion, dislike, ubicacion;
-        ImageView fotoHueca;
+        private TextView nombre, prioridad, direccion, dislike;
+        ImageView fotoHueca, ubicacion;
         public ViewHolder(View itemView){
             super(itemView);
 
@@ -38,7 +38,7 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
             dislike= (TextView) itemView.findViewById(R.id.text_dislike);
             direccion= (TextView) itemView.findViewById(R.id.txt_direccion);
             fotoHueca= (ImageView) itemView.findViewById(R.id.imagenView);
-            ubicacion = (TextView) itemView.findViewById(R.id.txt_direccion);
+            ubicacion = (ImageView) itemView.findViewById(R.id.ubicacion);
         }
     }
     public List<Hueca> huecaList;
@@ -64,13 +64,8 @@ public class HuecaAdapter extends RecyclerView.Adapter<HuecaAdapter.ViewHolder> 
         holder.nombre.setText(huecaList.get(position).getNombre());
         holder.prioridad.setText(""+huecaList.get(position).getPrioridad());
         holder.dislike.setText(""+huecaList.get(position).getDislike());
+
         //holder.direccion.setText(huecaList.get(position).getUbicacion());
-        holder.ubicacion.setText((Html.fromHtml(
-                "" +
-                        "<a href=\"http://maps.google.com/maps?q=1+Infinite+Loop,+Cupertino,+Santa+Clara,+California+95014\">" +
-                        "Ubicación"+
-                        "</a>")));
-        holder.ubicacion.setMovementMethod(LinkMovementMethod.getInstance());
         //holder.fotoHueca.setImageResource(huecaList.get(position).getImagen());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

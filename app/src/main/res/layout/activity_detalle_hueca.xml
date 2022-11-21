@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="165dp"
-            android:text="TextView"
+            android:text="Ubicación"
             android:textSize="18dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,6 +80,18 @@
             android:layout_marginTop="34dp"
             android:layout_marginEnd="149dp"
             app:srcCompat="@drawable/ic_dislike" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="64dp"
+            android:layout_height="43dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="204dp"
+            app:srcCompat="@drawable/ubicacion" />
 
     </RelativeLayout>
 
